@@ -1,8 +1,12 @@
 ﻿# RXTX 许可证
 
 > 本文档为 RXTX 官方 COPYING 文件的中文翻译摘要版。
-> 完整的英文 LGPL v2.1 许可证全文请参阅：[GNU LGPL v2.1 英文全文](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html)
-> 中文参考：[GNU LGPL v2.1 中文参考](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.cn.html)
+>
+> **完整版请参阅**：[COPYING.md](COPYING.md) — 包含 RXTX 许可证全文 + GNU LGPL v2.1 全文中文翻译
+>
+> 在线参考：
+> - [GNU LGPL v2.1 英文全文](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html)
+> - [GNU LGPL v2.1 中文参考](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.cn.html)
 
 ---
 
@@ -106,4 +110,4 @@ GNU LGPL v2.1 完整英文版本可在以下网址找到：
 
 | ← 上一篇 | 🏠 首页 |下一篇 → |
 |---------|--------|---------|
-| [贡献者名单](AUTHORS.md) | [返回文档首页](index.md) | — |
+| [贡献者名单](AUTHORS.md) | [返回文档首页](index.md) | [完整许可证](COPYING.md) |

@@ -41,7 +41,7 @@ rxtx/
 | 构建平台 | 目标平台 | Linux | Windows | Mac OS |
 |---------|---------|-------|---------|--------|
 | **Linux x86** | x86 | ✅ | ✅ | ❌ |
-| **Linux x86_64** | x86_64 | ✅ | ✅ | ❌ |
+| **Linux x86_64** | x86_64 | ✅ | ✅ | ✅ |
 | **Linux arm** | arm | ✅ | ❌ | ❌ |
 | **Mac OS x86_64** | x86_64 | ❌ | ❌ | ✅ |
 
@@ -67,7 +67,9 @@ RXTX 基于 **GNU LGPL v2.1 + 受控接口例外**（Controlled Interface Except
 > 📝 **什么是"受控接口例外"？**  
 > RXTX 通过 Sun 的 CommAPI 接口与应用程序链接。LGPL 的"受控接口例外"允许你通过这种标准接口使用 RXTX，而不必担心许可证传染问题。
 
-完整许可证内容请参阅 [LICENSE.md](LICENSE.md)。
+完整许可证内容请参阅：
+- [LICENSE.md](LICENSE.md) — 许可证摘要
+- [COPYING.md](COPYING.md) — 完整许可证全文（含 RXTX 许可证 + GNU LGPL v2.1 全文）
 
 ### 相关资源
 

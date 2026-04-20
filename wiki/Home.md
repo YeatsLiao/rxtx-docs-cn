@@ -39,6 +39,7 @@ RXTX 是一个为 Java 提供跨平台串口和并口访问的开源项目。
 | 贡献者 | [AUTHORS.md](../AUTHORS.md) |
 | 变更日志 | [ChangeLog.md](../ChangeLog.md) |
 | 许可证 | [LICENSE.md](../LICENSE.md) |
+| 完整许可证 | [COPYING.md](../COPYING.md) |
 
 ---
 

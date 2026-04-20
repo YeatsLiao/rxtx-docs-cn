@@ -386,7 +386,12 @@ $ ./autogen.sh
 
 ### L. RMISecurityManager 相关问题
 
-详见项目中的 `RMISecurityManager.html` 文件。
+> ⚠️ **说明**：`RMISecurityManager.html` 原文件已从官方仓库移除，无法找到对应内容。
+>
+> 如果你需要使用 RXTX 配合 Java RMI SecurityManager，建议查阅：
+> - RXTX 邮件列表历史记录（Majordomo@hex.linuxgrrls.org）
+> - Oracle Java 官方文档中关于 SecurityManager 的通用说明
+> - 在 GitHub Issue 中提出你的使用场景
 
 ---
 

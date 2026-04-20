@@ -72,6 +72,9 @@ RXTX 不是一个人短时间完成的杰作。以下是所有为 RXTX 做出贡
 | **Will Kassebaum** | rxtx.spec 相关工作 |
 | **Yuen-Ping Leung** | FreeBSD 支持修复 |
 | **Masayuki "Tencho" Yamashita** | 日语安装说明 |
+| **Martin Pool** | 支持显式指定的端口列表 |
+| **Karl Asha** | RXTX 网站托管（blackdown.org）；调试 autoconfig；提醒升级到 1.1.1 |
+| **Oliver Frommel** | IRIX 端口；修复 open() 调用使 4/5/6/8/20 引脚无需短接；协助追踪阻止包正常工作的线程问题；多次建议；使用 RS232 分析仪验证串口通信 |
 
 ---
 

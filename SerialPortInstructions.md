@@ -143,7 +143,7 @@ $ sudo usermod -a -G uucp 用户名
 <dependency>
     <groupId>org.rxtx</groupId>
     <artifactId>rxtx</artifactId>
-    <version>2.1.7</version>
+    <version>2.2</version>
 </dependency>
 ```
 
