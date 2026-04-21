@@ -1,10 +1,8 @@
 # RXTX 中文文档
 
-## 项目简介
+## 仓库说明
 
 这是 RXTX 库的中文文档仓库。RXTX 是一个为 Java 提供跨平台串行端口（Serial Port）和并行端口（Parallel Port）访问的开源库。
-
-> 💡 **什么是串口？** 串口是计算机上一种传统的通信接口（如 COM1、COM2），常用于连接单片机、仪器仪表、工业设备等。RXTX 让 Java 程序能够与这些设备通信。
 
 ## 如何访问文档
 
@@ -25,31 +23,41 @@
    - 直接在浏览器中打开 `index.md` 文件
    - 或使用支持 Markdown 预览的编辑器查看
 
-## 文档内容
+## 文档结构
+
+```
+rxtx-docs-cn/
+├── index.md                # 文档首页
+├── project-overview.md     # 项目简介（原 README.md）
+├── INSTALL.md              # 安装指南
+├── SerialPortInstructions.md  # 串口使用教程
+├── PORTING.md              # 移植指南
+├── ChangeLog.md            # 变更日志
+├── AUTHORS.md              # 贡献者名单
+├── license-summary.md      # 许可证摘要（原 LICENSE.md）
+├── full-license.md         # 完整许可证（原 COPYING.md）
+├── wiki/                   # 额外文档
+│   ├── Home.md
+│   └── Supported-Build-Hosts.md
+└── _config.yml            # GitHub Pages 配置
+```
+
+## 文档导航
 
 ### 入门
-
-| 文档 | 说明 |
-|-----|------|
-| [📖 项目简介](README.md) | RXTX 是什么、支持平台、许可证概览 |
-| [🚀 安装指南](INSTALL.md) | 构建、安装、常见问题 FAQ（26 条） |
-| [🔌 串口使用教程](SerialPortInstructions.md) | 查找端口、权限配置、Java 代码示例 |
+- [项目简介](project-overview.md)
+- [安装指南](INSTALL.md)
+- [串口使用教程](SerialPortInstructions.md)
 
 ### 参考
-
-| 文档 | 说明 |
-|-----|------|
-| [🔧 移植指南](PORTING.md) | 向新平台移植 RXTX 的方法 |
-| [🖥️ 支持的构建主机](wiki/Supported-Build-Hosts.md) | 各平台构建兼容性矩阵 |
-| [📋 变更日志](ChangeLog.md) | v0.1 → v2.2 完整历史 |
+- [移植指南](PORTING.md)
+- [支持的构建主机](wiki/Supported-Build-Hosts.md)
+- [变更日志](ChangeLog.md)
 
 ### 关于
-
-| 文档 | 说明 |
-|-----|------|
-| [👥 贡献者名单](AUTHORS.md) | 所有参与 RXTX 开发的开发者 |
-| [⚖️ 许可证摘要](LICENSE.md) | LGPL v2.1 + 受控接口例外说明 |
-| [📜 完整许可证](COPYING.md) | GNU LGPL v2.1 全文中文翻译 |
+- [贡献者名单](AUTHORS.md)
+- [许可证摘要](license-summary.md)
+- [完整许可证](full-license.md)
 
 ## 项目特点
 
