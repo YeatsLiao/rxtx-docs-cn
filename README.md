@@ -76,6 +76,16 @@ rxtx-docs-cn/
 
 欢迎提交 Issue 或 Pull Request 来改进文档！
 
+## 附录：参考链接
+
+| 名称 | 链接 |
+|------|------|
+| RXTX 官方 Wiki | [http://rxtx.qbang.org/wiki/index.php/Main_Page](http://rxtx.qbang.org/wiki/index.php/Main_Page) |
+| RXTX GitHub Pages | [https://rxtx.github.io/rxtx/](https://rxtx.github.io/rxtx/) |
+| JControl 下载页面 | [http://www.jcontrol.org/download/index_en.html](http://www.jcontrol.org/download/index_en.html) |
+| RXTX 实现 Java 串口编程 | [https://www.zhangshuwei.com/index.php/2021/10/24/rxtx%E5%AE%9E%E7%8E%B0java%E4%B8%B2%E5%8F%A3%E7%BC%96%E7%A8%8B/](https://www.zhangshuwei.com/index.php/2021/10/24/rxtx%E5%AE%9E%E7%8E%B0java%E4%B8%B2%E5%8F%A3%E7%BC%96%E7%A8%8B/) |
+| Fizzed RXTX for Java | [https://www.fizzed.com/oss/rxtx-for-java](https://www.fizzed.com/oss/rxtx-for-java) |
+
 ---
 
 *本项目由 [YeatsLiao](https://github.com/YeatsLiao) 维护。*
