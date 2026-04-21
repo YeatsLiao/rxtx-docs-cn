@@ -1,0 +1,37 @@
+# GitHub Pages 配置
+
+# 站点设置
+title: RXTX 中文文档
+description: RXTX 是一个为 Java 提供跨平台串口和并口访问的开源库的中文文档
+baseurl: "" # 不需要baseurl，因为是直接部署在根目录
+url: "https://yeatsliao.github.io/rxtx-docs-cn" # 站点URL
+
+# 构建设置
+markdown: kramdown
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# 导航菜单
+nav_pages:
+  - title: 首页
+    url: /
+  - title: 项目简介
+    url: /README.md
+  - title: 安装指南
+    url: /INSTALL.md
+  - title: 串口使用教程
+    url: /SerialPortInstructions.md
+  - title: 移植指南
+    url: /PORTING.md
+  - title: 支持的构建主机
+    url: /wiki/Supported-Build-Hosts.md
+  - title: 变更日志
+    url: /ChangeLog.md
+  - title: 贡献者名单
+    url: /AUTHORS.md
+  - title: 许可证摘要
+    url: /LICENSE.md
+  - title: 完整许可证
+    url: /COPYING.md
