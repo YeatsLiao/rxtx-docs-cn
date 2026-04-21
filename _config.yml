@@ -3,8 +3,8 @@
 # 站点设置
 title: RXTX 中文文档
 description: RXTX 是一个为 Java 提供跨平台串口和并口访问的开源库的中文文档
-baseurl: ""
-url: "https://yeatsliao.github.io/rxtx-docs-cn"
+baseurl: "/rxtx-docs-cn"
+url: "https://yeatsliao.github.io"
 
 # 构建设置
 markdown: kramdown
