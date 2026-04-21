@@ -48,7 +48,7 @@ Fizzed 提供了 RXTX 的预编译二进制包，特别支持 64 位系统。这
 |------|--------|----------|
 | RXTX-2-2-20081207 | Windows-x64 | [下载](https://bitbucket.org/jlauer/mfz-cdn/downloads/mfz-rxtx-2.2-20081207-win-x64.zip) |
 | RXTX-2-2-20081207 | Windows-x86 | [下载](https://bitbucket.org/jlauer/mfz-cdn/downloads/mfz-rxtx-2.2-20081207-win-x86.zip) |
-| RXTX-2-20081207 | Windows-ia64 | [下载](https://bitbucket.org/jlauer/mfz-cdn/downloads/mfz-rxtx-2.2-20081207-win-ia64.zip) |
+| RXTX-2-2-20081207 | Windows-ia64 | [下载](https://bitbucket.org/jlauer/mfz-cdn/downloads/mfz-rxtx-2.2-20081207-win-ia64.zip) |
 | RXTX-2-2-20081207 | Linux-x86_64 | [下载](https://bitbucket.org/jlauer/mfz-cdn/downloads/mfz-rxtx-2.2-20081207-linux-x86_64.zip) |
 | RXTX-2-2-20081207 | Linux-i386 | [下载](https://bitbucket.org/jlauer/mfz-cdn/downloads/mfz-rxtx-2.2-20081207-linux-i386.zip) |
 
