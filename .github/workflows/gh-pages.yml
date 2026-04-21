@@ -31,7 +31,9 @@ jobs:
       
       # 构建网站
       - name: Build website
-        run: jekyll build
+        run: |
+          jekyll build
+          ls -la ./_site
       
       # 部署到GitHub Pages
       - name: Deploy to GitHub Pages
