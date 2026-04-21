@@ -9,9 +9,6 @@ url: "https://yeatsliao.github.io/rxtx-docs-cn"
 # 构建设置
 markdown: kramdown
 
-# 主题设置
-theme: jekyll-theme-cayman
-
 # 插件
 plugins:
   - jekyll-seo-tag
