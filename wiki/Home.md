@@ -11,7 +11,10 @@ RXTX 是一个为 Java 提供跨平台串口和并口访问的开源项目。
 ## 📄 页面列表
 
 - **Home**（本页面）- 项目概览
-- **[Supported Build Hosts](Supported-Build-Hosts.md)** - 支持的构建主机平台
+- **[Supported Build Hosts](SupportedBuildHosts.md)** - 支持的构建主机平台
+- **[常见问题](FAQ.md)** - 常见问题及解答
+- **[开发指南](Development.md)** - 开发者参考资料
+- **[下载资源](Download.md)** - 源代码和预编译二进制包
 
 ## 🚀 快速链接
 
@@ -34,12 +37,18 @@ RXTX 是一个为 Java 提供跨平台串口和并口访问的开源项目。
 
 | 主题 | 文档 |
 |-----|------|
-| 安装 | [INSTALL.md](../INSTALL.md) |
-| 移植 | [PORTING.md](../PORTING.md) |
-| 贡献者 | [AUTHORS.md](../AUTHORS.md) |
-| 变更日志 | [ChangeLog.md](../ChangeLog.md) |
-| 许可证 | [LICENSE.md](../LICENSE.md) |
-| 完整许可证 | [COPYING.md](../COPYING.md) |
+| 入门 | [项目简介](../ProjectOverview.md) |
+| 入门 | [安装指南](../INSTALL.md) |
+| 入门 | [串口使用教程](../SerialPortInstructions.md) |
+| 参考 | [移植指南](../Porting.md) |
+| 参考 | [支持的构建主机](SupportedBuildHosts.md) |
+| 参考 | [变更日志](../ChangeLog.md) |
+| 参考 | [常见问题](FAQ.md) |
+| 参考 | [开发指南](Development.md) |
+| 参考 | [下载资源](Download.md) |
+| 关于 | [贡献者名单](../AUTHORS.md) |
+| 关于 | [许可证摘要](../LicenseSummary.md) |
+| 关于 | [完整许可证](../FullLicense.md) |
 
 ---
 

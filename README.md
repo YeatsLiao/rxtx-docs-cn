@@ -28,17 +28,20 @@
 ```
 rxtx-docs-cn/
 ├── index.md                # 文档首页
-├── ProjectOverview.md      # 项目简介（原 README.md）
+├── ProjectOverview.md      # 项目简介
 ├── INSTALL.md              # 安装指南
 ├── SerialPortInstructions.md  # 串口使用教程
 ├── Porting.md              # 移植指南
 ├── ChangeLog.md            # 变更日志
 ├── AUTHORS.md              # 贡献者名单
-├── LicenseSummary.md       # 许可证摘要（原 LICENSE.md）
-├── FullLicense.md          # 完整许可证（原 COPYING.md）
+├── LicenseSummary.md       # 许可证摘要
+├── FullLicense.md          # 完整许可证
 ├── wiki/                   # 额外文档
-│   ├── Home.md
-│   └── SupportedBuildHosts.md
+│   ├── Home.md             # Wiki 首页
+│   ├── SupportedBuildHosts.md  # 支持的构建主机
+│   ├── FAQ.md              # 常见问题
+│   ├── Development.md      # 开发指南
+│   └── Download.md         # 下载资源
 └── _config.yml            # GitHub Pages 配置
 ```
 
@@ -53,32 +56,25 @@ rxtx-docs-cn/
 - [移植指南](Porting.md)
 - [支持的构建主机](wiki/SupportedBuildHosts.md)
 - [变更日志](ChangeLog.md)
+- [常见问题](wiki/FAQ.md)
+- [开发指南](wiki/Development.md)
+- [下载资源](wiki/Download.md)
 
 ### 关于
 - [贡献者名单](AUTHORS.md)
 - [许可证摘要](LicenseSummary.md)
 - [完整许可证](FullLicense.md)
 
-## 项目特点
-
-- **跨平台支持**：支持 Linux、Windows、Mac OS、Solaris、FreeBSD、HP-UX 等多种操作系统
-- **完整 CommAPI 实现**：遵循 Sun 的 [Java Communications API](https://docs.oracle.com/cd/E17802_01/products/products/javacomm/reference/api/)（简称 CommAPI）规范，提供 `gnu.io` 包的实现
-- **串口和并口支持**：同时支持 RS232 串口通信和并口打印
-- **事件通知**：支持串口事件监听（数据到达、载波检测、线路状态变化等）
-- **流控支持**：支持硬件流控（RTS/CTS）和软件流控（XON/XOFF）
-- **LGPL 许可证**：基于 GNU LGPL v2.1 开源发布，允许在各种项目中免费使用
-
 ## 官方资源
 
 - **官方网站**：http://www.rxtx.org
 - **源码仓库**：https://github.com/rxtx/rxtx
 - **邮件列表**：Majordomo@hex.linuxgrrls.org（发送 "subscribe rxtx" 订阅）
+- **官方 Wiki**：http://rxtx.qbang.org/wiki/
 
-## 翻译说明
+## 贡献
 
-- 基于 RXTX 2.2（development 分支）
-- 许可证以英文原版为准
-- 欢迎提交 Issue 改进翻译
+欢迎提交 Issue 或 Pull Request 来改进文档！
 
 ---
 

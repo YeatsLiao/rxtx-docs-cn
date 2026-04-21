@@ -193,3 +193,11 @@ java -Dgnu.io.rxtx.debug=true YourApplication
 ---
 
 *本页面翻译自 RXTX 官方 Wiki。*
+
+---
+
+## 📎 文档导航
+
+| ← 上一篇 | 🏠 首页 |下一篇 → |
+|---------|--------|---------|
+| [常见问题](FAQ.md) | [返回文档首页](../index.md) | [下载资源](Download.md) |
