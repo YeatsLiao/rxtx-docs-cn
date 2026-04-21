@@ -31,7 +31,7 @@
 
 | 文档 | 说明 |
 |-----|------|
-| [📖 项目简介](project-overview.md) | RXTX 是什么、支持平台、许可证概览 |
+| [📖 项目简介](ProjectOverview.md) | RXTX 是什么、支持平台、许可证概览 |
 | [🚀 安装指南](INSTALL.md) | 构建、安装、常见问题 FAQ（26 条） |
 | [🔌 串口使用教程](SerialPortInstructions.md) | 查找端口、权限配置、Java 代码示例 |
 
@@ -39,8 +39,8 @@
 
 | 文档 | 说明 |
 |-----|------|
-| [🔧 移植指南](PORTING.md) | 向新平台移植 RXTX 的方法 |
-| [🖥️ 支持的构建主机](wiki/Supported-Build-Hosts.md) | 各平台构建兼容性矩阵 |
+| [🔧 移植指南](Porting.md) | 向新平台移植 RXTX 的方法 |
+| [🖥️ 支持的构建主机](wiki/SupportedBuildHosts.md) | 各平台构建兼容性矩阵 |
 | [📋 变更日志](ChangeLog.md) | v0.1 → v2.2 完整历史 |
 
 ### 关于
@@ -48,8 +48,8 @@
 | 文档 | 说明 |
 |-----|------|
 | [👥 贡献者名单](AUTHORS.md) | 所有参与 RXTX 开发的开发者 |
-| [⚖️ 许可证摘要](license-summary.md) | LGPL v2.1 + 受控接口例外说明 |
-| [📜 完整许可证](full-license.md) | GNU LGPL v2.1 全文中文翻译 |
+| [⚖️ 许可证摘要](LicenseSummary.md) | LGPL v2.1 + 受控接口例外说明 |
+| [📜 完整许可证](FullLicense.md) | GNU LGPL v2.1 全文中文翻译 |
 
 ## 项目特点
 

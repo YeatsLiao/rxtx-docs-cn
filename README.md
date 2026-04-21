@@ -28,36 +28,36 @@
 ```
 rxtx-docs-cn/
 ├── index.md                # 文档首页
-├── project-overview.md     # 项目简介（原 README.md）
+├── ProjectOverview.md      # 项目简介（原 README.md）
 ├── INSTALL.md              # 安装指南
 ├── SerialPortInstructions.md  # 串口使用教程
-├── PORTING.md              # 移植指南
+├── Porting.md              # 移植指南
 ├── ChangeLog.md            # 变更日志
 ├── AUTHORS.md              # 贡献者名单
-├── license-summary.md      # 许可证摘要（原 LICENSE.md）
-├── full-license.md         # 完整许可证（原 COPYING.md）
+├── LicenseSummary.md       # 许可证摘要（原 LICENSE.md）
+├── FullLicense.md          # 完整许可证（原 COPYING.md）
 ├── wiki/                   # 额外文档
 │   ├── Home.md
-│   └── Supported-Build-Hosts.md
+│   └── SupportedBuildHosts.md
 └── _config.yml            # GitHub Pages 配置
 ```
 
 ## 文档导航
 
 ### 入门
-- [项目简介](project-overview.md)
+- [项目简介](ProjectOverview.md)
 - [安装指南](INSTALL.md)
 - [串口使用教程](SerialPortInstructions.md)
 
 ### 参考
-- [移植指南](PORTING.md)
-- [支持的构建主机](wiki/Supported-Build-Hosts.md)
+- [移植指南](Porting.md)
+- [支持的构建主机](wiki/SupportedBuildHosts.md)
 - [变更日志](ChangeLog.md)
 
 ### 关于
 - [贡献者名单](AUTHORS.md)
-- [许可证摘要](license-summary.md)
-- [完整许可证](full-license.md)
+- [许可证摘要](LicenseSummary.md)
+- [完整许可证](FullLicense.md)
 
 ## 项目特点
 

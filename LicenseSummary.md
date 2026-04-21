@@ -110,4 +110,4 @@ GNU LGPL v2.1 完整英文版本可在以下网址找到：
 
 | ← 上一篇 | 🏠 首页 |下一篇 → |
 |---------|--------|---------|
-| [贡献者名单](AUTHORS.md) | [返回文档首页](index.md) | [完整许可证](full-license.md) |
+| [贡献者名单](AUTHORS.md) | [返回文档首页](index.md) | [完整许可证](FullLicense.md) |
