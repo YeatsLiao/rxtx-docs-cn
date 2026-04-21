@@ -372,7 +372,7 @@ public class SerialEventListener implements SerialPortEventListener {
 
 - RXTX 官方文档：https://github.com/rxtx/rxtx
 - 安装指南：[INSTALL.md](INSTALL.md)
-- 移植指南：[PORTING.md](PORTING.md)
+- 移植指南：[Porting.md](Porting.md)
 - 贡献者列表：[AUTHORS.md](AUTHORS.md)
 
 ---
@@ -386,4 +386,4 @@ public class SerialEventListener implements SerialPortEventListener {
 
 | ← 上一篇 | 🏠 首页 |下一篇 → |
 |---------|--------|---------|
-| [安装指南](INSTALL.md) | [返回文档首页](index.md) | [移植指南](PORTING.md) |
+| [安装指南](INSTALL.md) | [返回文档首页](index.md) | [移植指南](Porting.md) |

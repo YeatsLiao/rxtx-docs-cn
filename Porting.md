@@ -267,4 +267,4 @@ RXTX 支持标准和非标准波特率。标准波特率包括：
 
 | ← 上一篇 | 🏠 首页 |下一篇 → |
 |---------|--------|---------|
-| [串口使用教程](SerialPortInstructions.md) | [返回文档首页](index.md) | [支持的构建主机](wiki/Supported-Build-Hosts.md) |
+| [串口使用教程](SerialPortInstructions.md) | [返回文档首页](index.md) | [支持的构建主机](wiki/SupportedBuildHosts.md) |
