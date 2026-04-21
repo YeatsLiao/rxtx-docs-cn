@@ -374,6 +374,405 @@ public class SerialEventListener implements SerialPortEventListener {
 - 安装指南：[INSTALL.md](INSTALL.md)
 - 移植指南：[Porting.md](Porting.md)
 - 贡献者列表：[AUTHORS.md](AUTHORS.md)
+- 常见问题：[FAQ](wiki/FAQ.md)
+- 开发指南：[Development](wiki/Development.md)
+- 下载资源：[Download](wiki/Download.md)
+
+---
+
+## 8. 高级封装示例
+
+以下是一个更完整的串口操作封装示例，包含参数配置、工具类和测试代码：
+
+### 8.1 串口参数封装
+
+```java
+package com.pilot.ioserver.basic.pbl.port.serialPort;
+
+import gnu.io.SerialPort;
+
+/**
+ * 串口参数
+ */
+public final class SerialPortParameter {
+
+    /**
+ * 串口名称(COM0、COM1、COM2等等)
+ */
+    private String serialPortName;
+    /**
+ * 波特率
+ * 默认：115200
+ */
+    private int baudRate;
+    /**
+ * 数据位 默认8位
+ * 可以设置的值：SerialPort.DATABITS_5、SerialPort.DATABITS_6、SerialPort.DATABITS_7、SerialPort.DATABITS_8
+ * 默认：SerialPort.DATABITS_8
+ */
+    private int dataBits;
+    /**
+ * 停止位
+ * 可以设置的值：SerialPort.STOPBITS_1、SerialPort.STOPBITS_2、SerialPort.STOPBITS_1_5
+ * 默认：SerialPort.STOPBITS_1
+ */
+    private int stopBits;
+    /**
+ * 校验位
+ * 可以设置的值：SerialPort.PARITY_NONE、SerialPort.PARITY_ODD、SerialPort.PARITY_EVEN、SerialPort.PARITY_MARK、SerialPort.PARITY_SPACE
+ * 默认：SerialPort.PARITY_NONE
+ */
+    private int parity;
+
+    public SerialPortParameter(String serialPortName) {
+        this.serialPortName = serialPortName;
+        this.baudRate = 115200;
+        this.dataBits = SerialPort.DATABITS_8;
+        this.stopBits = SerialPort.STOPBITS_1;
+        this.parity = SerialPort.PARITY_NONE;
+    }
+
+    public SerialPortParameter(String serialPortName, int baudRate) {
+        this.serialPortName = serialPortName;
+        this.baudRate = baudRate;
+        this.dataBits = SerialPort.DATABITS_8;
+        this.stopBits = SerialPort.STOPBITS_1;
+        this.parity = SerialPort.PARITY_NONE;
+    }
+
+    public String getSerialPortName() {
+        return serialPortName;
+    }
+
+    public void setSerialPortName(String serialPortName) {
+        this.serialPortName = serialPortName;
+    }
+
+    public int getBaudRate() {
+        return baudRate;
+    }
+
+    public void setBaudRate(int baudRate) {
+        this.baudRate = baudRate;
+    }
+
+    public int getDataBits() {
+        return dataBits;
+    }
+
+    public void setDataBits(int dataBits) {
+        this.dataBits = dataBits;
+    }
+
+    public int getStopBits() {
+        return stopBits;
+    }
+
+    public void setStopBits(int stopBits) {
+        this.stopBits = stopBits;
+    }
+
+    public int getParity() {
+        return parity;
+    }
+
+    public void setParity(int parity) {
+        this.parity = parity;
+    }
+}
+```
+
+### 8.2 串口工具类
+
+```java
+package com.pilot.ioserver.basic.pbl.port.serialPort;
+
+import gnu.io.*;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.TooManyListenersException;
+
+/**
+ * 串口工具类
+ */
+public class SerialPortUtil {
+
+    /**
+ * 获得系统可用的端口名称列表(COM0、COM1、COM2等等)
+ *
+ * @return List<String>可用端口名称列表
+ */
+
+    @SuppressWarnings("unchecked")
+    public static List<String> getSerialPortList() {
+        List<String> systemPorts = new ArrayList<>();
+        //获得系统可用的端口
+        Enumeration<CommPortIdentifier> portList = CommPortIdentifier.getPortIdentifiers();
+        while (portList.hasMoreElements()) {
+            String portName = portList.nextElement().getName();//获得端口的名字
+ systemPorts.add(portName);
+        }
+        return systemPorts;
+    }
+
+    /**
+ * 打开串口
+ *
+ * @param serialPortName 串口名称
+ * @return SerialPort 串口对象
+ * @throws NoSuchPortException 对应串口不存在
+ * @throws PortInUseException 串口在使用中
+ * @throws UnsupportedCommOperationException 不支持操作操作
+ */
+    public static SerialPort openSerialPort(String serialPortName)
+            throws NoSuchPortException, PortInUseException, UnsupportedCommOperationException {
+        SerialPortParameter parameter = new SerialPortParameter(serialPortName);
+        return openSerialPort(parameter);
+    }
+
+    /**
+ * 打开串口
+ *
+ * @param serialPortName 串口名称
+ * @param baudRate 波特率
+ * @return SerialPort 串口对象
+ * @throws NoSuchPortException 对应串口不存在
+ * @throws PortInUseException 串口在使用中
+ * @throws UnsupportedCommOperationException 不支持操作操作
+ */
+    public static SerialPort openSerialPort(String serialPortName, int baudRate)
+            throws NoSuchPortException, PortInUseException, UnsupportedCommOperationException {
+        SerialPortParameter parameter = new SerialPortParameter(serialPortName, baudRate);
+        return openSerialPort(parameter);
+    }
+
+    /**
+ * 打开串口
+ *
+ * @param serialPortName 串口名称
+ * @param baudRate 波特率
+ * @param timeout 串口打开超时时间
+ * @return SerialPort 串口对象
+ * @throws NoSuchPortException 对应串口不存在
+ * @throws PortInUseException 串口在使用中
+ * @throws UnsupportedCommOperationException 不支持操作操作
+ */
+    public static SerialPort openSerialPort(String serialPortName, int baudRate, int timeout)
+            throws NoSuchPortException, PortInUseException, UnsupportedCommOperationException {
+        SerialPortParameter parameter = new SerialPortParameter(serialPortName, baudRate);
+        return openSerialPort(parameter, timeout);
+    }
+
+    /**
+ * 打开串口
+ *
+ * @param parameter 串口参数
+ * @return SerialPort 串口对象
+ * @throws NoSuchPortException 对应串口不存在
+ * @throws PortInUseException 串口在使用中
+ * @throws UnsupportedCommOperationException 不支持操作操作
+ */
+    public static SerialPort openSerialPort(SerialPortParameter parameter)
+            throws NoSuchPortException, PortInUseException, UnsupportedCommOperationException {
+        return openSerialPort(parameter, 2000);
+    }
+
+    /**
+ * 打开串口
+ *
+ * @param parameter 串口参数
+ * @param timeout 串口打开超时时间
+ * @return SerialPort串口对象
+ * @throws NoSuchPortException 对应串口不存在
+ * @throws PortInUseException 串口在使用中
+ * @throws UnsupportedCommOperationException 不支持操作操作
+ */
+    public static SerialPort openSerialPort(SerialPortParameter parameter, int timeout)
+            throws NoSuchPortException, PortInUseException, UnsupportedCommOperationException {
+        //通过端口名称得到端口
+        CommPortIdentifier portIdentifier = CommPortIdentifier.getPortIdentifier(parameter.getSerialPortName());
+        //打开端口，（自定义名字，打开超时时间）
+        CommPort commPort = portIdentifier.open(parameter.getSerialPortName(), timeout);
+        //判断是不是串口
+        if (commPort instanceof SerialPort) {
+            SerialPort serialPort = (SerialPort) commPort;
+            //设置串口参数（波特率，数据位8，停止位1，校验位无）
+ serialPort.setSerialPortParams(parameter.getBaudRate(), parameter.getDataBits(), parameter.getStopBits(), parameter.getParity());
+            System.out.println("开启串口成功，串口名称：" + parameter.getSerialPortName());
+            return serialPort;
+        } else {
+            //是其他类型的端口
+            throw new NoSuchPortException();
+        }
+    }
+
+    /**
+ * 关闭串口
+ *
+ * @param serialPort 要关闭的串口对象
+ */
+    public static void closeSerialPort(SerialPort serialPort) {
+        if (serialPort != null) {
+ serialPort.close();
+            System.out.println("关闭了串口：" + serialPort.getName());
+        }
+    }
+
+    /**
+ * 向串口发送数据
+ *
+ * @param serialPort 串口对象
+ * @param data 发送的数据
+ */
+    public static void sendData(SerialPort serialPort, byte[] data) {
+        OutputStream os = null;
+        try {
+            //获得串口的输出流
+ os = serialPort.getOutputStream();
+ os.write(data);
+ os.flush();
+        } catch (IOException e) {
+ e.printStackTrace();
+        } finally {
+            try {
+                if (os != null) {
+ os.close();
+                }
+            } catch (IOException e) {
+ e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+ * 从串口读取数据
+ *
+ * @param serialPort 要读取的串口
+ * @return 读取的数据
+ */
+    public static byte[] readData(SerialPort serialPort) {
+        InputStream is = null;
+        byte[] bytes = null;
+        try {
+            //获得串口的输入流
+ is = serialPort.getInputStream();
+            //获得数据长度
+            int bufflenth = is.available();
+            while (bufflenth != 0) {
+                //初始化byte数组
+ bytes = new byte[bufflenth];
+ is.read(bytes);
+ bufflenth = is.available();
+            }
+        } catch (IOException e) {
+ e.printStackTrace();
+        } finally {
+            try {
+                if (is != null) {
+ is.close();
+                }
+            } catch (IOException e) {
+ e.printStackTrace();
+            }
+        }
+        return bytes;
+    }
+
+    /**
+ * 给串口设置监听
+ *
+ * @param serialPort serialPort 要读取的串口
+ * @param listener SerialPortEventListener监听对象
+ * @throws TooManyListenersException 监听对象太多
+ */
+    public static void setListenerToSerialPort(SerialPort serialPort, SerialPortEventListener listener) throws TooManyListenersException {
+        //给串口添加事件监听
+ serialPort.addEventListener(listener);
+        //串口有数据监听
+ serialPort.notifyOnDataAvailable(true);
+        //中断事件监听
+ serialPort.notifyOnBreakInterrupt(true);
+    }
+
+}
+```
+
+### 8.3 测试代码
+
+```java
+package com.pilot.ioserver.basic.pbl.port.serialPort;
+
+import gnu.io.*;
+import org.junit.Test;
+
+import java.util.List;
+import java.util.TooManyListenersException;
+
+/**
+ * 串口测试代码
+ */
+public class SerialPortUtilTest {
+
+    /**
+ * 测试获取串口列表
+ */
+    @Test
+    public void getSystemPortList() {
+
+        List<String> portList = SerialPortUtil.getSerialPortList();
+        System.out.println(portList);
+
+    }
+
+    /**
+ * 测试串口打开，读，写操作
+ */
+    @Test
+    public void serialPortAction() {
+        try {
+            final SerialPort serialPort = SerialPortUtil.openSerialPort("COM2", 115200);
+            //启动一个线程每2s向串口发送数据，发送1000次hello
+            new Thread(() -> {
+                int i = 1;
+                while (i < 1000) {
+                    String s = "hello";
+                    byte[] bytes = s.getBytes();
+                    SerialPortUtil.sendData(serialPort, bytes);//发送数据
+ i++;
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+ e.printStackTrace();
+                    }
+                }
+            }).start();
+            //设置串口的listener
+            SerialPortUtil.setListenerToSerialPort(serialPort, event -> {
+                //数据通知
+                if (event.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
+                    byte[] bytes = SerialPortUtil.readData(serialPort);
+                    System.out.println("收到的数据长度：" + bytes.length);
+                    System.out.println("收到的数据：" + new String(bytes));
+                }
+            });
+            try {
+                // sleep 一段时间保证线程可以执行完
+                Thread.sleep(3 * 30 * 1000);
+            } catch (InterruptedException e) {
+ e.printStackTrace();
+            }
+        } catch (NoSuchPortException | PortInUseException | UnsupportedCommOperationException | TooManyListenersException e) {
+ e.printStackTrace();
+        }
+    }
+
+}
+```
 
 ---
 

@@ -60,11 +60,66 @@ $ make install  # 在使用 gmake 的系统上用 gmake
 ```
 
 > ⚠️ **路径问题**：安装路径中**不能包含空格**！
->
+> 
 > ❌ 错误示例：`/home/jarvi/test build/rxtx/...`
 > ✅ 正确示例：`/home/jarvi/test_build/rxtx/...`
 
 如果快速安装方式不起效，或你不想让脚本修改系统，请继续阅读下面的详细说明。
+
+### 2.1.1 预编译二进制包
+
+Fizzed 提供了 RXTX 的预编译二进制包，特别支持 64 位系统。这些二进制包基于最新的 CVS 快照构建，比官方网站上的版本更稳定。
+
+**支持的平台：**
+- Windows x86 (32位)
+- Windows x64 (64位)
+- Windows ia64
+- Linux x86 (32位)
+- Linux x86_64 (64位)
+
+**下载链接：**
+| 版本 | 文件名 | 下载链接 |
+|------|--------|----------|
+| RXTX-2-2-20081207 | Windows-x64 | [下载](https://bitbucket.org/jlauer/mfz-cdn/downloads/mfz-rxtx-2.2-20081207-win-x64.zip) |
+| RXTX-2-2-20081207 | Windows-x86 | [下载](https://bitbucket.org/jlauer/mfz-cdn/downloads/mfz-rxtx-2.2-20081207-win-x86.zip) |
+| RXTX-2-2-20081207 | Windows-ia64 | [下载](https://bitbucket.org/jlauer/mfz-cdn/downloads/mfz-rxtx-2.2-20081207-win-ia64.zip) |
+| RXTX-2-2-20081207 | Linux-x86_64 | [下载](https://bitbucket.org/jlauer/mfz-cdn/downloads/mfz-rxtx-2.2-20081207-linux-x86_64.zip) |
+| RXTX-2-2-20081207 | Linux-i386 | [下载](https://bitbucket.org/jlauer/mfz-cdn/downloads/mfz-rxtx-2.2-20081207-linux-i386.zip) |
+
+**安装步骤：**
+
+1. **下载对应平台的二进制包**
+2. **解压文件**
+3. **拷贝文件到指定目录**：
+
+   **Windows 平台：**
+   - 拷贝 `rxtxSerial.dll` → `<JAVA_HOME>\jre\bin`
+   - 拷贝 `rxtxParallel.dll` → `<JAVA_HOME>\jre\bin`
+   - 拷贝 `RXTXcomm.jar` → `<JAVA_HOME>\jre\lib\ext`
+
+   **Linux 平台：**
+   - 拷贝 `librxtxSerial.so` → `<JAVA_HOME>/jre/lib/i386/` (32位) 或 `<JAVA_HOME>/jre/lib/amd64/` (64位)
+   - 拷贝 `librxtxParallel.so` → `<JAVA_HOME>/jre/lib/i386/` (32位) 或 `<JAVA_HOME>/jre/lib/amd64/` (64位)
+   - 拷贝 `RXTXcomm.jar` → `<JAVA_HOME>/jre/lib/ext/`
+
+4. **在项目中引入 RXTXcomm.jar**
+
+   **Maven 依赖**（如果使用系统范围依赖）：
+   ```xml
+   <dependency>
+       <groupId>gnu.io</groupId>
+       <artifactId>com-lib</artifactId>
+       <version>2.2</version>
+       <scope>system</scope>
+       <systemPath>${project.basedir}/src/main/resources/jar/RXTXcomm.jar</systemPath>
+   </dependency>
+   ```
+
+**注意事项：**
+- 确保选择与你的 Java 版本（32位/64位）匹配的二进制包
+- 测试通过的平台：
+  - Windows：2008, 2003, Vista SP1
+  - Linux：CentOS 5.0, 5.2
 
 ---
 

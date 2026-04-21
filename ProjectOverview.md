@@ -42,6 +42,9 @@
 | [🔧 移植指南](Porting.md) | 向新平台移植 RXTX 的方法 |
 | [🖥️ 支持的构建主机](wiki/SupportedBuildHosts.md) | 各平台构建兼容性矩阵 |
 | [📋 变更日志](ChangeLog.md) | v0.1 → v2.2 完整历史 |
+| [❓ 常见问题](wiki/FAQ.md) | 常见问题及解答 |
+| [🛠️ 开发指南](wiki/Development.md) | 开发者参考资料 |
+| [📥 下载资源](wiki/Download.md) | 源代码和预编译二进制包 |
 
 ### 关于
 
@@ -65,6 +68,26 @@
 - **官方网站**：http://www.rxtx.org
 - **源码仓库**：https://github.com/rxtx/rxtx
 - **邮件列表**：Majordomo@hex.linuxgrrls.org（发送 "subscribe rxtx" 订阅）
+- **官方 Wiki**：http://rxtx.qbang.org/wiki/（由 RXTX 用户和开发者维护）
+- **原始 RXTX 网站**：http://users.frii.com/jarvi/rxtx/（大部分信息已迁移到 Wiki）
+
+## 社区
+
+RXTX 拥有活跃的社区，欢迎用户和开发者参与：
+
+- **项目使用 RXTX**：有许多项目在使用 RXTX 库，包括工业控制系统、嵌入式设备通信、科学仪器接口等
+- **贡献方式**：
+  - 提交代码到 GitHub 仓库
+  - 在邮件列表中分享经验和解决方案
+  - 改进文档和翻译
+  - 报告 bug 和提出新功能建议
+
+## 项目历史
+
+- RXTX 是一个历史悠久的开源项目，为 Java 提供串口和并口访问能力
+- 最初由 Trent Jarvi 等人创建
+- 目前在 GitHub 上活跃维护
+- 当 2.2 版本发布时，官方 Wiki 将成为 RXTX 的主页
 
 ## 翻译说明
 
